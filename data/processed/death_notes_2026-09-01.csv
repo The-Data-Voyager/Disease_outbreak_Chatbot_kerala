@@ -1,0 +1,7 @@
+report_date,period_type,source_filename,schema_version,source_page,district_code,district_name,disease_raw,disease,age,sex,locality,death_date,parse_status,raw_text
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,death_notes_v1,3,TVM,Thiruvananthapuram,Dengue,Dengue,53,female,KUNNATHUKAL,2026-08-30,parsed,"TVM: Dengue Death: 53/F, KUNNATHUKAL, DOD:-30.08.2026"
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,death_notes_v1,3,EKM,Ernakulam,Lepto,Leptospirosis,56,male,Edavanakkad,2026-08-27,parsed,"EKM: Lepto Death: 56/M, Edavanakkad, DOD ;27.08.2026"
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,death_notes_v1,3,KKD,Kozhikode,Lepto,Leptospirosis,74,male,VAYALADA,2026-08-20,parsed,"KKD: Lepto Death: 74/M, VAYALADA, DOD 20.08.2026"
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,death_notes_v1,3,MPM,Malappuram,Hep A,Hepatitis A,25,male,Areacode,2026-08-26,parsed,"MPM: Hep A Death: 25/M, Areacode, DOD 26.08.2026"
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,death_notes_v1,3,PKD,Palakkad,H1N1,Influenza A (H1N1),26,male,Agali,2026-08-28,parsed,"PKD: H1N1 Death: 26/M, Agali, DOD : 28.08.2026"
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,death_notes_v1,3,MPM,Malappuram,Amoebic Meningo Encephalitis,Amoebic Meningoencephalitis,38,male,Marakkara,2026-08-31,parsed,"MPM: Amoebic Meningo Encephalitis Death: 38/M, Marakkara, DOD 31.08.2026"

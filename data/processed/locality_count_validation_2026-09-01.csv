@@ -1,0 +1,11 @@
+disease,district_code,locality_count,district_confirmed,checked,match
+Dengue,TVM,20,20,True,True
+Dengue,KLM,11,11,True,True
+Dengue,PTA,3,3,True,True
+Dengue,IDK,1,1,True,True
+Dengue,EKM,7,7,True,True
+Dengue,TSR,22,22,True,True
+Dengue,PKD,3,3,True,True
+Dengue,MPM,10,10,True,True
+Dengue,WYD,1,1,True,True
+Dengue,KNR,1,1,True,True

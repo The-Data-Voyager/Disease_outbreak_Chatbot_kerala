@@ -1,0 +1,15 @@
+report_date,period_type,source_filename,schema_version,district_code,district_name,fever_op,fever_ip,chikungunya_suspected,chikungunya_confirmed,chikungunya_deaths,dengue_suspected,dengue_confirmed,dengue_deaths,leptospirosis_suspected,leptospirosis_confirmed,leptospirosis_deaths,add_confirmed,chickenpox_confirmed,hepatitis_a_confirmed,cholera_suspected_cases,cholera_suspected_deaths,cholera_confirmed_cases,cholera_confirmed_deaths,aes_confirmed,je_confirmed,malaria_pv_imported,malaria_pv_indigenous,malaria_pf_imported,malaria_pf_indigenous,malaria_mixed_imported,malaria_mixed_indigenous,malaria_deaths,scrub_typhus_confirmed,influenza_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,TVM,Thiruvananthapuram,786,13,0,1,0,29,20,1,0,3,0,128,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,11
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,KLM,Kollam,487,1,0,0,0,18,11,0,0,2,0,72,8,3,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,PTA,Pathanamthitta,409,4,0,0,0,2,3,0,0,3,0,48,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,IDK,Idukki,358,12,0,0,0,4,1,0,0,0,0,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,KTM,Kottayam,399,3,0,0,0,2,0,0,0,0,0,51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,ALP,Alappuzha,457,0,0,0,0,1,0,0,2,0,0,81,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,EKM,Ernakulam,984,19,0,0,0,18,7,0,2,4,1,155,8,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,TSR,Thrissur,953,14,0,0,0,20,22,0,0,0,0,192,10,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,15
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,PKD,Palakkad,1114,7,0,0,0,21,3,0,0,0,0,180,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,MPM,Malappuram,2972,1,0,0,0,17,10,0,1,3,0,360,10,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,KKD,Kozhikode,1014,2,0,0,0,32,0,0,5,1,1,134,11,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,WYD,Wayanad,876,2,0,0,0,1,1,0,0,1,0,77,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,KNR,Kannur,795,6,0,0,0,5,1,0,1,1,0,169,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,KSD,Kasaragod,876,10,0,0,0,4,0,0,0,0,0,104,7,1,0,0,0,0,0,0,3,0,0,0,0,0,0,1,4

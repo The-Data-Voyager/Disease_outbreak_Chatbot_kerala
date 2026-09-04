@@ -1,0 +1,407 @@
+report_date,period_type,source_filename,schema_version,source_page,geography_level,district_code,district_name,disease,metric,subtype,value,source_column
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Fever,outpatient,,786,fever_op
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Fever,inpatient,,13,fever_ip
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Chikungunya,suspected,,0,chikungunya_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Chikungunya,confirmed,,1,chikungunya_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Chikungunya,deaths,,0,chikungunya_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Dengue,suspected,,29,dengue_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Dengue,confirmed,,20,dengue_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Dengue,deaths,,1,dengue_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Leptospirosis,suspected,,0,leptospirosis_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Leptospirosis,confirmed,,3,leptospirosis_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Leptospirosis,deaths,,0,leptospirosis_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Acute Diarrhoeal Disease,confirmed,,128,add_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Chickenpox,confirmed,,5,chickenpox_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Hepatitis A,confirmed,,0,hepatitis_a_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Cholera,suspected,,0,cholera_suspected_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Cholera,suspected_deaths,,0,cholera_suspected_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Cholera,confirmed,,0,cholera_confirmed_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Cholera,deaths,,0,cholera_confirmed_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Acute Encephalitis Syndrome,confirmed,,0,aes_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Japanese Encephalitis,confirmed,,0,je_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Malaria,confirmed,PV imported,0,malaria_pv_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Malaria,confirmed,PV indigenous,0,malaria_pv_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Malaria,confirmed,PF imported,0,malaria_pf_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Malaria,confirmed,PF indigenous,0,malaria_pf_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Malaria,confirmed,Mixed imported,0,malaria_mixed_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Malaria,confirmed,Mixed indigenous,0,malaria_mixed_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Malaria,deaths,,0,malaria_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Scrub Typhus,confirmed,,1,scrub_typhus_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TVM,Thiruvananthapuram,Influenza,confirmed,,11,influenza_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Fever,outpatient,,487,fever_op
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Fever,inpatient,,1,fever_ip
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Chikungunya,suspected,,0,chikungunya_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Chikungunya,confirmed,,0,chikungunya_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Chikungunya,deaths,,0,chikungunya_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Dengue,suspected,,18,dengue_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Dengue,confirmed,,11,dengue_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Dengue,deaths,,0,dengue_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Leptospirosis,suspected,,0,leptospirosis_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Leptospirosis,confirmed,,2,leptospirosis_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Leptospirosis,deaths,,0,leptospirosis_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Acute Diarrhoeal Disease,confirmed,,72,add_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Chickenpox,confirmed,,8,chickenpox_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Hepatitis A,confirmed,,3,hepatitis_a_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Cholera,suspected,,0,cholera_suspected_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Cholera,suspected_deaths,,0,cholera_suspected_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Cholera,confirmed,,0,cholera_confirmed_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Cholera,deaths,,0,cholera_confirmed_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Acute Encephalitis Syndrome,confirmed,,0,aes_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Japanese Encephalitis,confirmed,,0,je_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Malaria,confirmed,PV imported,0,malaria_pv_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Malaria,confirmed,PV indigenous,0,malaria_pv_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Malaria,confirmed,PF imported,1,malaria_pf_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Malaria,confirmed,PF indigenous,0,malaria_pf_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Malaria,confirmed,Mixed imported,0,malaria_mixed_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Malaria,confirmed,Mixed indigenous,0,malaria_mixed_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Malaria,deaths,,0,malaria_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Scrub Typhus,confirmed,,0,scrub_typhus_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KLM,Kollam,Influenza,confirmed,,0,influenza_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Fever,outpatient,,409,fever_op
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Fever,inpatient,,4,fever_ip
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Chikungunya,suspected,,0,chikungunya_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Chikungunya,confirmed,,0,chikungunya_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Chikungunya,deaths,,0,chikungunya_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Dengue,suspected,,2,dengue_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Dengue,confirmed,,3,dengue_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Dengue,deaths,,0,dengue_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Leptospirosis,suspected,,0,leptospirosis_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Leptospirosis,confirmed,,3,leptospirosis_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Leptospirosis,deaths,,0,leptospirosis_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Acute Diarrhoeal Disease,confirmed,,48,add_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Chickenpox,confirmed,,6,chickenpox_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Hepatitis A,confirmed,,0,hepatitis_a_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Cholera,suspected,,0,cholera_suspected_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Cholera,suspected_deaths,,0,cholera_suspected_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Cholera,confirmed,,0,cholera_confirmed_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Cholera,deaths,,0,cholera_confirmed_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Acute Encephalitis Syndrome,confirmed,,0,aes_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Japanese Encephalitis,confirmed,,0,je_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Malaria,confirmed,PV imported,0,malaria_pv_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Malaria,confirmed,PV indigenous,0,malaria_pv_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Malaria,confirmed,PF imported,0,malaria_pf_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Malaria,confirmed,PF indigenous,0,malaria_pf_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Malaria,confirmed,Mixed imported,0,malaria_mixed_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Malaria,confirmed,Mixed indigenous,0,malaria_mixed_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Malaria,deaths,,0,malaria_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Scrub Typhus,confirmed,,0,scrub_typhus_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PTA,Pathanamthitta,Influenza,confirmed,,2,influenza_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Fever,outpatient,,358,fever_op
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Fever,inpatient,,12,fever_ip
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Chikungunya,suspected,,0,chikungunya_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Chikungunya,confirmed,,0,chikungunya_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Chikungunya,deaths,,0,chikungunya_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Dengue,suspected,,4,dengue_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Dengue,confirmed,,1,dengue_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Dengue,deaths,,0,dengue_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Leptospirosis,suspected,,0,leptospirosis_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Leptospirosis,confirmed,,0,leptospirosis_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Leptospirosis,deaths,,0,leptospirosis_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Acute Diarrhoeal Disease,confirmed,,42,add_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Chickenpox,confirmed,,0,chickenpox_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Hepatitis A,confirmed,,0,hepatitis_a_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Cholera,suspected,,0,cholera_suspected_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Cholera,suspected_deaths,,0,cholera_suspected_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Cholera,confirmed,,0,cholera_confirmed_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Cholera,deaths,,0,cholera_confirmed_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Acute Encephalitis Syndrome,confirmed,,0,aes_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Japanese Encephalitis,confirmed,,0,je_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Malaria,confirmed,PV imported,0,malaria_pv_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Malaria,confirmed,PV indigenous,0,malaria_pv_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Malaria,confirmed,PF imported,0,malaria_pf_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Malaria,confirmed,PF indigenous,0,malaria_pf_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Malaria,confirmed,Mixed imported,0,malaria_mixed_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Malaria,confirmed,Mixed indigenous,0,malaria_mixed_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Malaria,deaths,,0,malaria_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Scrub Typhus,confirmed,,0,scrub_typhus_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,IDK,Idukki,Influenza,confirmed,,0,influenza_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Fever,outpatient,,399,fever_op
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Fever,inpatient,,3,fever_ip
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Chikungunya,suspected,,0,chikungunya_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Chikungunya,confirmed,,0,chikungunya_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Chikungunya,deaths,,0,chikungunya_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Dengue,suspected,,2,dengue_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Dengue,confirmed,,0,dengue_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Dengue,deaths,,0,dengue_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Leptospirosis,suspected,,0,leptospirosis_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Leptospirosis,confirmed,,0,leptospirosis_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Leptospirosis,deaths,,0,leptospirosis_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Acute Diarrhoeal Disease,confirmed,,51,add_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Chickenpox,confirmed,,0,chickenpox_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Hepatitis A,confirmed,,0,hepatitis_a_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Cholera,suspected,,0,cholera_suspected_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Cholera,suspected_deaths,,0,cholera_suspected_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Cholera,confirmed,,0,cholera_confirmed_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Cholera,deaths,,0,cholera_confirmed_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Acute Encephalitis Syndrome,confirmed,,0,aes_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Japanese Encephalitis,confirmed,,0,je_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Malaria,confirmed,PV imported,0,malaria_pv_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Malaria,confirmed,PV indigenous,0,malaria_pv_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Malaria,confirmed,PF imported,0,malaria_pf_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Malaria,confirmed,PF indigenous,0,malaria_pf_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Malaria,confirmed,Mixed imported,0,malaria_mixed_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Malaria,confirmed,Mixed indigenous,0,malaria_mixed_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Malaria,deaths,,0,malaria_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Scrub Typhus,confirmed,,0,scrub_typhus_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KTM,Kottayam,Influenza,confirmed,,2,influenza_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Fever,outpatient,,457,fever_op
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Fever,inpatient,,0,fever_ip
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Chikungunya,suspected,,0,chikungunya_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Chikungunya,confirmed,,0,chikungunya_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Chikungunya,deaths,,0,chikungunya_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Dengue,suspected,,1,dengue_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Dengue,confirmed,,0,dengue_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Dengue,deaths,,0,dengue_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Leptospirosis,suspected,,2,leptospirosis_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Leptospirosis,confirmed,,0,leptospirosis_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Leptospirosis,deaths,,0,leptospirosis_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Acute Diarrhoeal Disease,confirmed,,81,add_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Chickenpox,confirmed,,2,chickenpox_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Hepatitis A,confirmed,,0,hepatitis_a_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Cholera,suspected,,0,cholera_suspected_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Cholera,suspected_deaths,,0,cholera_suspected_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Cholera,confirmed,,0,cholera_confirmed_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Cholera,deaths,,0,cholera_confirmed_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Acute Encephalitis Syndrome,confirmed,,0,aes_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Japanese Encephalitis,confirmed,,0,je_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Malaria,confirmed,PV imported,0,malaria_pv_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Malaria,confirmed,PV indigenous,0,malaria_pv_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Malaria,confirmed,PF imported,0,malaria_pf_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Malaria,confirmed,PF indigenous,0,malaria_pf_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Malaria,confirmed,Mixed imported,0,malaria_mixed_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Malaria,confirmed,Mixed indigenous,0,malaria_mixed_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Malaria,deaths,,0,malaria_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Scrub Typhus,confirmed,,0,scrub_typhus_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,ALP,Alappuzha,Influenza,confirmed,,1,influenza_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Fever,outpatient,,984,fever_op
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Fever,inpatient,,19,fever_ip
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Chikungunya,suspected,,0,chikungunya_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Chikungunya,confirmed,,0,chikungunya_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Chikungunya,deaths,,0,chikungunya_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Dengue,suspected,,18,dengue_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Dengue,confirmed,,7,dengue_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Dengue,deaths,,0,dengue_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Leptospirosis,suspected,,2,leptospirosis_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Leptospirosis,confirmed,,4,leptospirosis_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Leptospirosis,deaths,,1,leptospirosis_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Acute Diarrhoeal Disease,confirmed,,155,add_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Chickenpox,confirmed,,8,chickenpox_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Hepatitis A,confirmed,,1,hepatitis_a_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Cholera,suspected,,0,cholera_suspected_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Cholera,suspected_deaths,,0,cholera_suspected_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Cholera,confirmed,,0,cholera_confirmed_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Cholera,deaths,,0,cholera_confirmed_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Acute Encephalitis Syndrome,confirmed,,0,aes_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Japanese Encephalitis,confirmed,,0,je_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Malaria,confirmed,PV imported,0,malaria_pv_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Malaria,confirmed,PV indigenous,0,malaria_pv_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Malaria,confirmed,PF imported,0,malaria_pf_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Malaria,confirmed,PF indigenous,0,malaria_pf_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Malaria,confirmed,Mixed imported,0,malaria_mixed_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Malaria,confirmed,Mixed indigenous,0,malaria_mixed_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Malaria,deaths,,0,malaria_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Scrub Typhus,confirmed,,0,scrub_typhus_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,EKM,Ernakulam,Influenza,confirmed,,31,influenza_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Fever,outpatient,,953,fever_op
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Fever,inpatient,,14,fever_ip
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Chikungunya,suspected,,0,chikungunya_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Chikungunya,confirmed,,0,chikungunya_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Chikungunya,deaths,,0,chikungunya_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Dengue,suspected,,20,dengue_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Dengue,confirmed,,22,dengue_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Dengue,deaths,,0,dengue_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Leptospirosis,suspected,,0,leptospirosis_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Leptospirosis,confirmed,,0,leptospirosis_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Leptospirosis,deaths,,0,leptospirosis_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Acute Diarrhoeal Disease,confirmed,,192,add_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Chickenpox,confirmed,,10,chickenpox_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Hepatitis A,confirmed,,1,hepatitis_a_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Cholera,suspected,,0,cholera_suspected_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Cholera,suspected_deaths,,0,cholera_suspected_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Cholera,confirmed,,0,cholera_confirmed_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Cholera,deaths,,0,cholera_confirmed_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Acute Encephalitis Syndrome,confirmed,,0,aes_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Japanese Encephalitis,confirmed,,0,je_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Malaria,confirmed,PV imported,1,malaria_pv_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Malaria,confirmed,PV indigenous,0,malaria_pv_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Malaria,confirmed,PF imported,0,malaria_pf_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Malaria,confirmed,PF indigenous,0,malaria_pf_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Malaria,confirmed,Mixed imported,0,malaria_mixed_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Malaria,confirmed,Mixed indigenous,0,malaria_mixed_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Malaria,deaths,,0,malaria_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Scrub Typhus,confirmed,,0,scrub_typhus_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,TSR,Thrissur,Influenza,confirmed,,15,influenza_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Fever,outpatient,,1114,fever_op
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Fever,inpatient,,7,fever_ip
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Chikungunya,suspected,,0,chikungunya_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Chikungunya,confirmed,,0,chikungunya_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Chikungunya,deaths,,0,chikungunya_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Dengue,suspected,,21,dengue_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Dengue,confirmed,,3,dengue_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Dengue,deaths,,0,dengue_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Leptospirosis,suspected,,0,leptospirosis_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Leptospirosis,confirmed,,0,leptospirosis_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Leptospirosis,deaths,,0,leptospirosis_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Acute Diarrhoeal Disease,confirmed,,180,add_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Chickenpox,confirmed,,6,chickenpox_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Hepatitis A,confirmed,,0,hepatitis_a_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Cholera,suspected,,0,cholera_suspected_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Cholera,suspected_deaths,,0,cholera_suspected_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Cholera,confirmed,,0,cholera_confirmed_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Cholera,deaths,,0,cholera_confirmed_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Acute Encephalitis Syndrome,confirmed,,0,aes_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Japanese Encephalitis,confirmed,,0,je_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Malaria,confirmed,PV imported,0,malaria_pv_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Malaria,confirmed,PV indigenous,0,malaria_pv_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Malaria,confirmed,PF imported,0,malaria_pf_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Malaria,confirmed,PF indigenous,0,malaria_pf_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Malaria,confirmed,Mixed imported,0,malaria_mixed_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Malaria,confirmed,Mixed indigenous,0,malaria_mixed_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Malaria,deaths,,0,malaria_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Scrub Typhus,confirmed,,0,scrub_typhus_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,PKD,Palakkad,Influenza,confirmed,,2,influenza_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Fever,outpatient,,2972,fever_op
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Fever,inpatient,,1,fever_ip
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Chikungunya,suspected,,0,chikungunya_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Chikungunya,confirmed,,0,chikungunya_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Chikungunya,deaths,,0,chikungunya_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Dengue,suspected,,17,dengue_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Dengue,confirmed,,10,dengue_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Dengue,deaths,,0,dengue_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Leptospirosis,suspected,,1,leptospirosis_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Leptospirosis,confirmed,,3,leptospirosis_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Leptospirosis,deaths,,0,leptospirosis_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Acute Diarrhoeal Disease,confirmed,,360,add_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Chickenpox,confirmed,,10,chickenpox_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Hepatitis A,confirmed,,6,hepatitis_a_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Cholera,suspected,,0,cholera_suspected_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Cholera,suspected_deaths,,0,cholera_suspected_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Cholera,confirmed,,0,cholera_confirmed_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Cholera,deaths,,0,cholera_confirmed_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Acute Encephalitis Syndrome,confirmed,,0,aes_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Japanese Encephalitis,confirmed,,0,je_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Malaria,confirmed,PV imported,0,malaria_pv_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Malaria,confirmed,PV indigenous,0,malaria_pv_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Malaria,confirmed,PF imported,0,malaria_pf_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Malaria,confirmed,PF indigenous,0,malaria_pf_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Malaria,confirmed,Mixed imported,0,malaria_mixed_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Malaria,confirmed,Mixed indigenous,0,malaria_mixed_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Malaria,deaths,,0,malaria_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Scrub Typhus,confirmed,,0,scrub_typhus_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,MPM,Malappuram,Influenza,confirmed,,5,influenza_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Fever,outpatient,,1014,fever_op
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Fever,inpatient,,2,fever_ip
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Chikungunya,suspected,,0,chikungunya_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Chikungunya,confirmed,,0,chikungunya_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Chikungunya,deaths,,0,chikungunya_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Dengue,suspected,,32,dengue_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Dengue,confirmed,,0,dengue_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Dengue,deaths,,0,dengue_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Leptospirosis,suspected,,5,leptospirosis_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Leptospirosis,confirmed,,1,leptospirosis_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Leptospirosis,deaths,,1,leptospirosis_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Acute Diarrhoeal Disease,confirmed,,134,add_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Chickenpox,confirmed,,11,chickenpox_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Hepatitis A,confirmed,,5,hepatitis_a_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Cholera,suspected,,0,cholera_suspected_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Cholera,suspected_deaths,,0,cholera_suspected_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Cholera,confirmed,,0,cholera_confirmed_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Cholera,deaths,,0,cholera_confirmed_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Acute Encephalitis Syndrome,confirmed,,0,aes_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Japanese Encephalitis,confirmed,,0,je_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Malaria,confirmed,PV imported,0,malaria_pv_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Malaria,confirmed,PV indigenous,0,malaria_pv_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Malaria,confirmed,PF imported,0,malaria_pf_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Malaria,confirmed,PF indigenous,0,malaria_pf_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Malaria,confirmed,Mixed imported,0,malaria_mixed_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Malaria,confirmed,Mixed indigenous,0,malaria_mixed_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Malaria,deaths,,0,malaria_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Scrub Typhus,confirmed,,0,scrub_typhus_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KKD,Kozhikode,Influenza,confirmed,,7,influenza_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Fever,outpatient,,876,fever_op
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Fever,inpatient,,2,fever_ip
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Chikungunya,suspected,,0,chikungunya_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Chikungunya,confirmed,,0,chikungunya_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Chikungunya,deaths,,0,chikungunya_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Dengue,suspected,,1,dengue_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Dengue,confirmed,,1,dengue_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Dengue,deaths,,0,dengue_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Leptospirosis,suspected,,0,leptospirosis_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Leptospirosis,confirmed,,1,leptospirosis_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Leptospirosis,deaths,,0,leptospirosis_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Acute Diarrhoeal Disease,confirmed,,77,add_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Chickenpox,confirmed,,4,chickenpox_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Hepatitis A,confirmed,,0,hepatitis_a_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Cholera,suspected,,0,cholera_suspected_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Cholera,suspected_deaths,,0,cholera_suspected_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Cholera,confirmed,,0,cholera_confirmed_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Cholera,deaths,,0,cholera_confirmed_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Acute Encephalitis Syndrome,confirmed,,0,aes_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Japanese Encephalitis,confirmed,,0,je_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Malaria,confirmed,PV imported,0,malaria_pv_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Malaria,confirmed,PV indigenous,0,malaria_pv_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Malaria,confirmed,PF imported,0,malaria_pf_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Malaria,confirmed,PF indigenous,0,malaria_pf_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Malaria,confirmed,Mixed imported,0,malaria_mixed_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Malaria,confirmed,Mixed indigenous,0,malaria_mixed_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Malaria,deaths,,0,malaria_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Scrub Typhus,confirmed,,0,scrub_typhus_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,WYD,Wayanad,Influenza,confirmed,,0,influenza_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Fever,outpatient,,795,fever_op
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Fever,inpatient,,6,fever_ip
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Chikungunya,suspected,,0,chikungunya_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Chikungunya,confirmed,,0,chikungunya_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Chikungunya,deaths,,0,chikungunya_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Dengue,suspected,,5,dengue_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Dengue,confirmed,,1,dengue_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Dengue,deaths,,0,dengue_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Leptospirosis,suspected,,1,leptospirosis_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Leptospirosis,confirmed,,1,leptospirosis_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Leptospirosis,deaths,,0,leptospirosis_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Acute Diarrhoeal Disease,confirmed,,169,add_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Chickenpox,confirmed,,6,chickenpox_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Hepatitis A,confirmed,,0,hepatitis_a_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Cholera,suspected,,0,cholera_suspected_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Cholera,suspected_deaths,,0,cholera_suspected_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Cholera,confirmed,,0,cholera_confirmed_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Cholera,deaths,,0,cholera_confirmed_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Acute Encephalitis Syndrome,confirmed,,0,aes_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Japanese Encephalitis,confirmed,,0,je_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Malaria,confirmed,PV imported,0,malaria_pv_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Malaria,confirmed,PV indigenous,0,malaria_pv_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Malaria,confirmed,PF imported,0,malaria_pf_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Malaria,confirmed,PF indigenous,0,malaria_pf_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Malaria,confirmed,Mixed imported,0,malaria_mixed_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Malaria,confirmed,Mixed indigenous,0,malaria_mixed_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Malaria,deaths,,0,malaria_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Scrub Typhus,confirmed,,0,scrub_typhus_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KNR,Kannur,Influenza,confirmed,,2,influenza_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Fever,outpatient,,876,fever_op
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Fever,inpatient,,10,fever_ip
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Chikungunya,suspected,,0,chikungunya_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Chikungunya,confirmed,,0,chikungunya_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Chikungunya,deaths,,0,chikungunya_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Dengue,suspected,,4,dengue_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Dengue,confirmed,,0,dengue_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Dengue,deaths,,0,dengue_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Leptospirosis,suspected,,0,leptospirosis_suspected
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Leptospirosis,confirmed,,0,leptospirosis_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Leptospirosis,deaths,,0,leptospirosis_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Acute Diarrhoeal Disease,confirmed,,104,add_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Chickenpox,confirmed,,7,chickenpox_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Hepatitis A,confirmed,,1,hepatitis_a_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Cholera,suspected,,0,cholera_suspected_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Cholera,suspected_deaths,,0,cholera_suspected_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Cholera,confirmed,,0,cholera_confirmed_cases
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Cholera,deaths,,0,cholera_confirmed_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Acute Encephalitis Syndrome,confirmed,,0,aes_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Japanese Encephalitis,confirmed,,0,je_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Malaria,confirmed,PV imported,3,malaria_pv_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Malaria,confirmed,PV indigenous,0,malaria_pv_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Malaria,confirmed,PF imported,0,malaria_pf_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Malaria,confirmed,PF indigenous,0,malaria_pf_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Malaria,confirmed,Mixed imported,0,malaria_mixed_imported
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Malaria,confirmed,Mixed indigenous,0,malaria_mixed_indigenous
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Malaria,deaths,,0,malaria_deaths
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Scrub Typhus,confirmed,,1,scrub_typhus_confirmed
+2026-09-01,daily,IDSP-Daily-Report-01.09.2026.pdf,daily_v1,2,district,KSD,Kasaragod,Influenza,confirmed,,4,influenza_confirmed

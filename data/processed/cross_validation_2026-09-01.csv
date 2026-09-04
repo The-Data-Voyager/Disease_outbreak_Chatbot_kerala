@@ -1,0 +1,16 @@
+check,district_total,state_total,match
+Fever OP,12480,12480,True
+Chikungunya confirmed,1,1,True
+Dengue suspected,174,174,True
+Dengue confirmed,79,79,True
+Dengue deaths,1,1,True
+Leptospirosis suspected,11,11,True
+Leptospirosis confirmed,18,18,True
+Leptospirosis deaths,2,2,True
+ADD confirmed,1793,1793,True
+Chickenpox confirmed,83,83,True
+Hepatitis A confirmed,17,17,True
+Scrub Typhus confirmed,2,2,True
+Influenza confirmed,82,82,True
+Malaria imported,5,5,True
+Malaria indigenous,0,0,True

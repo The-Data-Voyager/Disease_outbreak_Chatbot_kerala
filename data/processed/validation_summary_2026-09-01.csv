@@ -1,0 +1,68 @@
+check,status,details
+district required columns,PASS,Missing columns: set()
+district report date,PASS,Expected 2026-09-01; found {'2026-09-01'}
+district period type,PASS,Expected daily; found {'daily'}
+state required columns,PASS,Missing columns: set()
+state report date,PASS,Expected 2026-09-01; found {'2026-09-01'}
+state period type,PASS,Expected daily; found {'daily'}
+locality required columns,PASS,Missing columns: set()
+locality report date,PASS,Expected 2026-09-01; found {'2026-09-01'}
+locality period type,PASS,Expected daily; found {'daily'}
+death required columns,PASS,Missing columns: set()
+death report date,PASS,Expected 2026-09-01; found {'2026-09-01'}
+death period type,PASS,Expected daily; found {'daily'}
+One district source PDF,PASS,The district data should come from one PDF.
+district schema version,PASS,Expected daily_v1; found {'daily_v1'}
+district source page,PASS,Expected page 2; found {2}
+district source PDF,PASS,All tables must come from the same PDF.
+state schema version,PASS,Expected state_v1; found {'state_v1'}
+state source page,PASS,Expected page 3; found {3}
+state source PDF,PASS,All tables must come from the same PDF.
+locality schema version,PASS,Expected locality_v1; found {'locality_v1'}
+locality source page,PASS,Expected page 2; found {2}
+locality source PDF,PASS,All tables must come from the same PDF.
+death schema version,PASS,Expected death_notes_v1; found {'death_notes_v1'}
+death source page,PASS,Expected page 3; found {3}
+death source PDF,PASS,All tables must come from the same PDF.
+No missing district fields,PASS,Missing fields: set()
+No unrecognized district fields,PASS,Unrecognized fields: set()
+Fourteen district rows,PASS,Kerala must have exactly 14 district records.
+Unique district codes,PASS,Each district code must appear exactly once.
+Expected Kerala district codes,PASS,The district-code set does not match Kerala's 14 districts.
+No missing district measurements,PASS,Missing measurements: set()
+No unexpected district measurements,PASS,Unexpected measurements: set()
+No missing district values,PASS,Every district measurement must contain a number.
+No negative district values,PASS,Disease counts cannot be negative.
+District-validation columns,PASS,Missing district-validation columns: set()
+All 29 totals were validated,PASS,The validation file must contain the same 29 district measurements.
+Published district totals match,PASS,At least one district sum does not match the published total.
+Recalculated district totals match,PASS,Notebook 04 recalculation did not match the published totals.
+Fourteen district rows,PASS,Kerala must have exactly 14 district records.
+Unique district codes,PASS,Each district code must appear exactly once.
+Expected Kerala district codes,PASS,The district-code set does not match Kerala's 14 districts.
+No missing district measurements,PASS,Missing measurements: set()
+No unexpected district measurements,PASS,Unexpected measurements: set()
+No missing district values,PASS,Every district measurement must contain a number.
+No negative district values,PASS,Disease counts cannot be negative.
+District-validation columns,PASS,Missing district-validation columns: set()
+All 29 totals were validated,PASS,The validation file must contain the same 29 district measurements.
+Published district totals match,PASS,At least one district sum does not match the published total.
+Recalculated district totals match,PASS,Notebook 04 recalculation did not match the published totals.
+Expected observation count,PASS,Expected 406; found 406
+No missing observation values,PASS,Every normalized district observation must have a value.
+No negative observation values,PASS,Disease counts cannot be negative.
+No duplicate observations,PASS,"The same district, disease, metric and subtype must not appear more than once."
+State numeric conversion,PASS,At least one nonempty state value could not be converted to a number.
+State disease names present,PASS,Every state row needs a disease name.
+Unique state disease rows,PASS,A disease and subtype should appear only once.
+No negative state values,PASS,State disease counts cannot be negative.
+Valid locality district codes,PASS,A locality record contains an unknown district code.
+Locality text is present,PASS,Each locality row needs locality information.
+Locality diseases exist in state data,PASS,A locality disease is missing from the state disease table.
+No negative locality counts,PASS,Locality district counts cannot be negative.
+Valid death-note statuses,PASS,Death-note status must be parsed or needs_review.
+Valid death-note district codes,PASS,A parsed death record contains an unknown district code.
+Parsed death diseases present,PASS,Every parsed death record needs a disease.
+Parsed death dates are valid,PASS,Every parsed death record needs a valid YYYY-MM-DD date.
+All district-versus-state checks,PASS,At least one district total does not match the statewide value.
+Explicit locality counts match,PASS,At least one explicit locality count does not match its district confirmed value.
