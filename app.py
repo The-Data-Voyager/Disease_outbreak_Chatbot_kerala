@@ -73,12 +73,46 @@ ANSWER:"""
     return response.text
 
 
+SAMPLE_QUESTIONS = [
+    "What is the latest report date?",
+    "What diseases are reported in Kannur?",
+    "Which disease has the highest confirmed cases in Ernakulam?",
+    "Where was dengue reported in Kerala?",
+    "How many deaths were reported and from which diseases?",
+    "Compare dengue across all districts",
+    "What is the statewide situation of leptospirosis?",
+    "Any H1N1 deaths reported?",
+    "Which areas in Thiruvananthapuram have dengue cases?",
+    "What is the cumulative confirmed count of malaria?",
+    "How many chickenpox cases in Thrissur?",
+    "Which districts have leptospirosis localities?",
+    "What are the top diseases statewide?",
+    "Are there any cholera cases reported?",
+]
+
 # --- Streamlit UI ---
-st.set_page_config(page_title="IDSP Kerala Chatbot", page_icon="🏥")
+st.set_page_config(page_title="IDSP Kerala Chatbot", page_icon="🏥", layout="wide")
 st.title("🏥 IDSP Kerala Disease Surveillance Chatbot")
 st.caption("Ask questions about disease outbreaks, cases, deaths, and localities in Kerala.")
 
 router, vector, gemini_client = load_components()
+
+# --- Sidebar ---
+with st.sidebar:
+    st.header("Sample Questions")
+    st.markdown("Click any question to try it out:")
+
+    for q in SAMPLE_QUESTIONS:
+        if st.button(q, key=q, use_container_width=True):
+            st.session_state["selected_question"] = q
+
+    st.divider()
+    st.markdown("**Data Source:** [IDSP Kerala](https://dhs.kerala.gov.in/en/idsp-2/)")
+    st.markdown("**Powered by:** Gemini + ChromaDB + SQLite")
+
+    if st.button("Clear Chat", use_container_width=True):
+        st.session_state.messages = []
+        st.rerun()
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -87,7 +121,13 @@ for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-if prompt := st.chat_input("Ask about Kerala IDSP data..."):
+selected = st.session_state.pop("selected_question", None)
+prompt = st.chat_input("Ask about Kerala IDSP data...")
+
+if selected:
+    prompt = selected
+
+if prompt:
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
