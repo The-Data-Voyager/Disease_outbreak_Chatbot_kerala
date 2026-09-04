@@ -85,7 +85,7 @@ def classify_intent(question: str) -> str:
 
 class QueryRouter:
     def __init__(self, db_path: str):
-        self.conn = sqlite3.connect(db_path)
+        self.conn = sqlite3.connect(db_path, check_same_thread=False)
         self.conn.row_factory = sqlite3.Row
         self.cur = self.conn.cursor()
 
