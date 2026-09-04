@@ -5,3 +5,4 @@ __pycache__/
 notebooks/.ipynb_checkpoints/
 notebooks/data/
 *.db
+data/chroma_db/
