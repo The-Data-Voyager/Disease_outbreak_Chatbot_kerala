@@ -1,5 +1,5 @@
 
-"""IDSP Kerala — Query Router & SQL Retrieval Module"""
+"""IDSP Kerala - Query Router & SQL Retrieval Module"""
 
 import sqlite3
 import pandas as pd

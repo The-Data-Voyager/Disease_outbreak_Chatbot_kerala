@@ -1,4 +1,4 @@
-"""IDSP Kerala — Vector Search Module"""
+"""IDSP Kerala - Vector Search Module"""
 
 import os
 import chromadb
