@@ -13,9 +13,36 @@ DB_PATH = os.path.join("notebooks", "data", "idsp_kerala.db")
 CHROMA_PATH = os.path.join("data", "chroma_db")
 
 # Groq — OpenAI-compatible, free tier. Set GROQ_API_KEY in .env / Streamlit Secrets.
-# Override GROQ_MODEL to use a different Groq-hosted model.
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"
-GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
+
+# Groq retires model names periodically, so resolve a live one at startup rather
+# than hard-coding. Set GROQ_MODEL in Secrets to pin a specific model instead.
+PREFERRED_MODELS = [
+    "llama-3.3-70b-versatile",
+    "llama-3.1-8b-instant",
+    "openai/gpt-oss-20b",
+    "openai/gpt-oss-120b",
+    "gemma2-9b-it",
+]
+
+
+def resolve_groq_model(client):
+    """Pick a chat model that actually exists on this Groq account right now."""
+    pinned = os.getenv("GROQ_MODEL")
+    if pinned:
+        return pinned
+    try:
+        available = {m.id for m in client.models.list().data}
+    except Exception:
+        return "llama-3.1-8b-instant"
+    for name in PREFERRED_MODELS:
+        if name in available:
+            return name
+    for name in sorted(available):
+        low = name.lower()
+        if not any(tag in low for tag in ("whisper", "tts", "guard", "embed", "compound")):
+            return name
+    return "llama-3.1-8b-instant"
 
 SYSTEM_PROMPT = """You are an IDSP Kerala Disease Surveillance Assistant. You answer questions
 about disease outbreaks, case counts, deaths, and localities in Kerala using
@@ -39,7 +66,8 @@ def load_components():
     router = QueryRouter(DB_PATH)
     vector = VectorSearch(CHROMA_PATH)
     groq_client = OpenAI(api_key=os.getenv("GROQ_API_KEY"), base_url=GROQ_BASE_URL)
-    return router, vector, groq_client
+    model = resolve_groq_model(groq_client)
+    return router, vector, groq_client, model
 
 
 def build_context(question, router, vector):
@@ -58,7 +86,7 @@ def build_context(question, router, vector):
     return "\n\n".join(parts)
 
 
-def get_answer(question, router, vector, groq_client):
+def get_answer(question, router, vector, groq_client, model):
     context = build_context(question, router, vector)
     prompt = f"""Based on the following IDSP Kerala data, answer the user's question.
 
@@ -69,7 +97,7 @@ USER QUESTION: {question}
 
 ANSWER:"""
     response = groq_client.chat.completions.create(
-        model=GROQ_MODEL,
+        model=model,
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": prompt},
@@ -102,7 +130,7 @@ st.set_page_config(page_title="IDSP Kerala Chatbot", page_icon="🏥", layout="w
 st.title("🏥 IDSP Kerala Disease Surveillance Chatbot")
 st.caption("Ask questions about disease outbreaks, cases, deaths, and localities in Kerala.")
 
-router, vector, groq_client = load_components()
+router, vector, groq_client, groq_model = load_components()
 
 # --- Sidebar ---
 with st.sidebar:
@@ -115,7 +143,8 @@ with st.sidebar:
 
     st.divider()
     st.markdown("**Data Source:** [IDSP Kerala](https://dhs.kerala.gov.in/en/idsp-2/)")
-    st.markdown("**Powered by:** Groq (Llama 3.3) + bge-small (local) + ChromaDB + SQLite")
+    st.markdown("**Powered by:** Groq + bge-small (local) + ChromaDB + SQLite")
+    st.caption(f"LLM model: {groq_model}")
 
     if st.button("Clear Chat", use_container_width=True):
         st.session_state.messages = []
@@ -141,7 +170,7 @@ if prompt:
 
     with st.chat_message("assistant"):
         with st.spinner("Analyzing IDSP data..."):
-            answer = get_answer(prompt, router, vector, groq_client)
+            answer = get_answer(prompt, router, vector, groq_client, groq_model)
         st.markdown(answer)
 
     st.session_state.messages.append({"role": "assistant", "content": answer})
