@@ -15,7 +15,7 @@ CHROMA_PATH = os.path.join("data", "chroma_db")
 # Groq — OpenAI-compatible, free tier. Set GROQ_API_KEY in .env / Streamlit Secrets.
 # Override GROQ_MODEL to use a different Groq-hosted model.
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"
-GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
 
 SYSTEM_PROMPT = """You are an IDSP Kerala Disease Surveillance Assistant. You answer questions
 about disease outbreaks, case counts, deaths, and localities in Kerala using
