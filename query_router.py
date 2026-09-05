@@ -4,7 +4,47 @@
 import sqlite3
 import pandas as pd
 import re
+from datetime import date
 from typing import Optional
+
+
+MONTHS = {
+    "january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6,
+    "july": 7, "august": 8, "september": 9, "october": 10, "november": 11, "december": 12,
+    "jan": 1, "feb": 2, "mar": 3, "apr": 4, "jun": 6, "jul": 7, "aug": 8,
+    "sep": 9, "sept": 9, "oct": 10, "nov": 11, "dec": 12,
+}
+
+
+def extract_date(question: str) -> Optional[str]:
+    """Pull an explicit date from the question, returned as ISO (YYYY-MM-DD)."""
+    q = question.lower()
+
+    # ISO: 2026-08-20
+    m = re.search(r"\b(20\d{2})-(\d{1,2})-(\d{1,2})\b", q)
+    if m:
+        y, mo, d = map(int, m.groups())
+    else:
+        # DD/MM/YYYY, DD.MM.YYYY, DD-MM-YYYY
+        m = re.search(r"\b(\d{1,2})[/.-](\d{1,2})[/.-](20\d{2})\b", q)
+        if m:
+            d, mo, y = map(int, m.groups())
+        else:
+            # "20 august 2026" / "20th aug 2026"
+            m = re.search(r"\b(\d{1,2})(?:st|nd|rd|th)?\s+([a-z]+)\.?\s+(20\d{2})\b", q)
+            if m and MONTHS.get(m.group(2)):
+                d, mo, y = int(m.group(1)), MONTHS[m.group(2)], int(m.group(3))
+            else:
+                # "august 20 2026" / "august 20, 2026"
+                m = re.search(r"\b([a-z]+)\.?\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(20\d{2})\b", q)
+                if m and MONTHS.get(m.group(1)):
+                    d, mo, y = int(m.group(2)), MONTHS[m.group(1)], int(m.group(3))
+                else:
+                    return None
+    try:
+        return date(y, mo, d).isoformat()
+    except ValueError:
+        return None
 
 
 DISTRICT_ALIASES = {
@@ -94,11 +134,32 @@ class QueryRouter:
         self.cur.execute("SELECT MAX(report_date) FROM reports")
         return self.cur.fetchone()[0]
 
+    def _available_dates(self) -> set:
+        return {r[0] for r in self.cur.execute("SELECT report_date FROM reports").fetchall()}
+
     def route(self, question: str) -> tuple[str, pd.DataFrame]:
         intent = classify_intent(question)
         district = extract_district(question)
         disease = extract_disease(question)
+        requested_date = extract_date(question)
         latest = self._latest_date()
+
+        # If the user named a specific date, answer for THAT date (not the latest).
+        # If we have no report for it, say so and show the real available range.
+        target_date = latest
+        if requested_date:
+            available = self._available_dates()
+            if requested_date in available:
+                target_date = requested_date
+            else:
+                first, last = min(available), max(available)
+                return (
+                    f"No IDSP report is available for {requested_date}. "
+                    f"I have daily reports from {first} to {last} (a few days may be missing).",
+                    pd.DataFrame(),
+                )
+
+        latest = target_date  # sub-queries below filter on this date
 
         if intent == "data_availability":
             return self._data_availability()
