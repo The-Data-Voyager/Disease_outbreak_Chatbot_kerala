@@ -60,6 +60,7 @@ def extract_disease(question: str) -> Optional[str]:
 
 
 INTENT_PATTERNS = [
+    ("data_availability", r"\b(how many|how much|available|coverage)\b.*\b(day|date|report|data|record)\b"),
     ("latest_report",   r"\b(latest|recent|last|current|newest)\b.*\b(report|date|data)\b"),
     ("death_summary",   r"\b(death|died|fatal|mortality|dod)\b"),
     ("locality_search", r"\b(where|location|locality|localit|area|place|panchayat|village|town)\b"),
@@ -99,7 +100,9 @@ class QueryRouter:
         disease = extract_disease(question)
         latest = self._latest_date()
 
-        if intent == "latest_report":
+        if intent == "data_availability":
+            return self._data_availability()
+        elif intent == "latest_report":
             return self._latest_report()
         elif intent == "district_disease_summary":
             return self._district_summary(district, latest) if district else self._state_overview(disease, latest)
@@ -119,6 +122,13 @@ class QueryRouter:
             return self._compare_districts(disease, latest)
         else:
             return "I couldn't understand that question. Try asking about diseases, districts, deaths, or localities.", pd.DataFrame()
+
+    def _data_availability(self):
+        df = pd.read_sql_query("SELECT report_date, filename FROM reports ORDER BY report_date", self.conn)
+        count = len(df)
+        first = df.iloc[0]['report_date']
+        last = df.iloc[-1]['report_date']
+        return f"We have {count} daily reports from {first} to {last}.", df
 
     def _latest_report(self):
         df = pd.read_sql_query("SELECT report_date, period_type, filename, ingested_at FROM reports ORDER BY report_date DESC LIMIT 1", self.conn)

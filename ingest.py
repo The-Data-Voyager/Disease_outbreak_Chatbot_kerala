@@ -168,14 +168,26 @@ def to_state_count(value):
 # 1. SCRAPING
 # ---------------------------------------------------------------------------
 
+def sql_val(v):
+    """Convert pandas NA/NaN to None for SQLite binding."""
+    if v is None or (isinstance(v, float) and pd.isna(v)):
+        return None
+    try:
+        if pd.isna(v):
+            return None
+    except (TypeError, ValueError):
+        pass
+    return v
+
+
 def get_available_dates():
-    """Scrape the IDSP listing page for all available report dates."""
+    """Scrape the IDSP listing page for all available report dates and their page URLs."""
     print("Fetching IDSP listing page...")
     resp = requests.get(IDSP_URL, timeout=30)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
 
-    dates = []
+    date_map = {}
     for link in soup.select("article a"):
         href = link.get("href", "")
         if "/wp-content/" in href:
@@ -186,19 +198,15 @@ def get_available_dates():
             d, m, y = match.groups()
             try:
                 report_date = date(int(y), int(m), int(d))
-                dates.append(report_date)
+                full_href = href if href.startswith("http") else BASE_URL + href
+                date_map[report_date] = full_href
             except ValueError:
                 continue
-    return sorted(set(dates))
+    return date_map
 
 
-def get_pdf_url(report_date: date) -> str:
-    """Get the PDF download URL for a given date by visiting its report page."""
-    d = report_date.strftime("%d")
-    m = report_date.strftime("%m")
-    y = report_date.strftime("%Y")
-    page_url = f"{BASE_URL}/en/{y}/{m}/{d}/{d}-{m}-{y}/"
-
+def get_pdf_url_from_page(page_url: str, report_date: date) -> str:
+    """Get the PDF download URL by visiting the actual report page."""
     resp = requests.get(page_url, timeout=30)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
@@ -210,11 +218,13 @@ def get_pdf_url(report_date: date) -> str:
                 href = BASE_URL + href
             return href
 
+    y = report_date.strftime("%Y")
+    m = report_date.strftime("%m")
     date_str = report_date.strftime("%d.%m.%Y")
     return f"{BASE_URL}/wp-content/uploads/{y}/{m}/IDSP-Daily-Report-{date_str}.pdf"
 
 
-def download_pdf(report_date: date) -> Path:
+def download_pdf(report_date: date, page_url: str = None) -> Path:
     """Download a PDF for the given date. Returns the local path."""
     date_str = report_date.strftime("%d.%m.%Y")
     filename = f"IDSP-Daily-Report-{date_str}.pdf"
@@ -224,7 +234,12 @@ def download_pdf(report_date: date) -> Path:
         print(f"  PDF already exists: {filename}")
         return local_path
 
-    pdf_url = get_pdf_url(report_date)
+    if page_url:
+        pdf_url = get_pdf_url_from_page(page_url, report_date)
+    else:
+        y = report_date.strftime("%Y")
+        m = report_date.strftime("%m")
+        pdf_url = f"{BASE_URL}/wp-content/uploads/{y}/{m}/IDSP-Daily-Report-{date_str}.pdf"
     print(f"  Downloading: {pdf_url}")
     resp = requests.get(pdf_url, timeout=60)
     resp.raise_for_status()
@@ -240,10 +255,13 @@ def download_pdf(report_date: date) -> Path:
 
 def extract_report_date_from_table(table):
     header_text = " ".join(clean(cell) for row in table[:3] for cell in row)
-    match = re.search(r"\b\d{2}-\d{2}-\d{2}\b", header_text)
+    match = re.search(r"\b(\d{2})[/.-](\d{2})[/.-](\d{2,4})\b", header_text)
     if not match:
         raise ValueError("Report date not found in table header.")
-    return datetime.strptime(match.group(), "%d-%m-%y").date().isoformat()
+    d, m, y = match.groups()
+    if len(y) == 2:
+        y = "20" + y
+    return date(int(y), int(m), int(d)).isoformat()
 
 
 def extract_district_table(pdf_path: Path):
@@ -586,14 +604,14 @@ def load_into_db(report_date, pdf_path, observations_df, state_df, locality_df, 
                 "month_suspected_cases, month_suspected_deaths, month_confirmed, month_deaths, "
                 "cumulative_suspected_cases, cumulative_suspected_deaths, cumulative_confirmed, cumulative_deaths, source_page) "
                 "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                (report_id, row.get("serial_number"), row.get("disease_raw"), row.get("disease"),
-                 row.get("subtype_raw"), row.get("subtype"),
-                 row.get("daily_suspected_cases"), row.get("daily_suspected_deaths"),
-                 row.get("daily_confirmed"), row.get("daily_deaths"),
-                 row.get("month_suspected_cases"), row.get("month_suspected_deaths"),
-                 row.get("month_confirmed"), row.get("month_deaths"),
-                 row.get("cumulative_suspected_cases"), row.get("cumulative_suspected_deaths"),
-                 row.get("cumulative_confirmed"), row.get("cumulative_deaths"), 3)
+                (report_id, sql_val(row.get("serial_number")), row.get("disease_raw"), row.get("disease"),
+                 row.get("subtype_raw"), sql_val(row.get("subtype")),
+                 sql_val(row.get("daily_suspected_cases")), sql_val(row.get("daily_suspected_deaths")),
+                 sql_val(row.get("daily_confirmed")), sql_val(row.get("daily_deaths")),
+                 sql_val(row.get("month_suspected_cases")), sql_val(row.get("month_suspected_deaths")),
+                 sql_val(row.get("month_confirmed")), sql_val(row.get("month_deaths")),
+                 sql_val(row.get("cumulative_suspected_cases")), sql_val(row.get("cumulative_suspected_deaths")),
+                 sql_val(row.get("cumulative_confirmed")), sql_val(row.get("cumulative_deaths")), 3)
             )
 
     if not locality_df.empty:
@@ -625,27 +643,11 @@ def load_into_db(report_date, pdf_path, observations_df, state_df, locality_df, 
 
 
 # ---------------------------------------------------------------------------
-# 4. VECTOR STORE UPDATE (Notebook 07 logic)
+# 4. VECTOR STORE UPDATE (local bge-small-en-v1.5 embeddings)
 # ---------------------------------------------------------------------------
 
-def update_embeddings(report_date, observations_df, locality_df, death_df):
-    """Generate embeddings for new data and add to ChromaDB."""
-    try:
-        from google import genai
-        import chromadb
-    except ImportError:
-        print("  Skipping embeddings (google-genai or chromadb not installed).")
-        return
-
-    api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key:
-        print("  Skipping embeddings (GEMINI_API_KEY not set).")
-        return
-
-    gemini_client = genai.Client(api_key=api_key)
-    chroma_client = chromadb.PersistentClient(path=str(CHROMA_PATH))
-    collection = chroma_client.get_or_create_collection("idsp_kerala")
-
+def build_documents(report_date, observations_df, locality_df, death_df):
+    """Build RAG documents (text, metadata, id) from a report's extracted data."""
     documents, metadatas, ids = [], [], []
 
     district_diseases = observations_df.groupby(["district_code", "district_name", "disease"])
@@ -666,7 +668,7 @@ def update_embeddings(report_date, observations_df, locality_df, death_df):
                           "district_code": d_code, "district_name": d_name, "disease": disease})
         ids.append(doc_id)
 
-    if not locality_df.empty:
+    if locality_df is not None and not locality_df.empty:
         for _, row in locality_df.iterrows():
             count_str = f"{int(row['district_reported_count'])} confirmed cases" if pd.notna(row.get("district_reported_count")) else "count not specified"
             doc = (
@@ -684,7 +686,7 @@ def update_embeddings(report_date, observations_df, locality_df, death_df):
                               "disease": row["disease"]})
             ids.append(doc_id)
 
-    if not death_df.empty:
+    if death_df is not None and not death_df.empty:
         for _, row in death_df.iterrows():
             if row.get("parse_status") != "parsed":
                 continue
@@ -701,42 +703,104 @@ def update_embeddings(report_date, observations_df, locality_df, death_df):
                               "district_code": row.get("district_code"), "disease": row.get("disease")})
             ids.append(doc_id)
 
+    return documents, metadatas, ids
+
+
+def _get_collection(reset=False):
+    """Open (or create) the ChromaDB collection. Cosine space suits unit-normalized bge vectors."""
+    import chromadb
+    chroma_client = chromadb.PersistentClient(path=str(CHROMA_PATH))
+    if reset:
+        try:
+            chroma_client.delete_collection("idsp_kerala")
+        except Exception:
+            pass
+    return chroma_client.get_or_create_collection(
+        "idsp_kerala", metadata={"hnsw:space": "cosine"}
+    )
+
+
+def update_embeddings(report_date, observations_df, locality_df, death_df):
+    """Embed a single report's documents locally and upsert into ChromaDB."""
+    from embeddings import embed_documents
+
+    documents, metadatas, ids = build_documents(report_date, observations_df, locality_df, death_df)
     if not documents:
         return
 
-    print(f"  Embedding {len(documents)} documents...")
-    batch_size = 20
-    for i in range(0, len(documents), batch_size):
-        batch_docs = documents[i:i + batch_size]
-        batch_ids = ids[i:i + batch_size]
-        batch_metas = metadatas[i:i + batch_size]
+    collection = _get_collection()
+    print(f"  Embedding {len(documents)} documents (bge-small-en-v1.5)...")
+    embeddings = embed_documents(documents)
+    collection.upsert(ids=ids, documents=documents, metadatas=metadatas, embeddings=embeddings)
+    print(f"  Embedded {len(documents)} documents to ChromaDB.")
 
-        result = gemini_client.models.embed_content(
-            model="gemini-embedding-001",
-            contents=batch_docs,
-            config={"task_type": "RETRIEVAL_DOCUMENT"}
+
+def rebuild_vectors_from_db():
+    """Rebuild the entire ChromaDB vector store from data already in SQLite.
+
+    Run this after switching embedding models (vector dimensions differ, so the
+    old collection is incompatible), or to regenerate embeddings without
+    re-downloading any PDFs.
+    """
+    from embeddings import embed_documents
+
+    if not DB_PATH.exists():
+        print("No database found; nothing to rebuild.")
+        return
+
+    conn = sqlite3.connect(str(DB_PATH))
+    conn.row_factory = sqlite3.Row
+    reports = conn.execute("SELECT report_id, report_date FROM reports ORDER BY report_date").fetchall()
+    print(f"Rebuilding vectors from {len(reports)} reports in SQLite...")
+
+    collection = _get_collection(reset=True)
+
+    all_docs, all_metas, all_ids = [], [], []
+    for r in reports:
+        report_id, report_date = r["report_id"], r["report_date"]
+        observations_df = pd.read_sql_query(
+            "SELECT district_code, district_name, disease, metric, subtype, value "
+            "FROM observations WHERE report_id = ?", conn, params=[report_id])
+        locality_df = pd.read_sql_query(
+            "SELECT district_code, district_name, disease, district_reported_count, locality_text "
+            "FROM locality_reports WHERE report_id = ?", conn, params=[report_id])
+        death_df = pd.read_sql_query(
+            "SELECT district_code, district_name, disease, age, sex, locality, death_date, parse_status "
+            "FROM death_notes WHERE report_id = ?", conn, params=[report_id])
+
+        docs, metas, ids = build_documents(report_date, observations_df, locality_df, death_df)
+        all_docs.extend(docs)
+        all_metas.extend(metas)
+        all_ids.extend(ids)
+
+    conn.close()
+
+    if not all_docs:
+        print("No documents to embed.")
+        return
+
+    print(f"Embedding {len(all_docs)} documents (bge-small-en-v1.5)...")
+    embeddings = embed_documents(all_docs)
+    batch = 500
+    for i in range(0, len(all_docs), batch):
+        collection.upsert(
+            ids=all_ids[i:i + batch], documents=all_docs[i:i + batch],
+            metadatas=all_metas[i:i + batch], embeddings=embeddings[i:i + batch],
         )
-        embeddings = [e.values for e in result.embeddings]
-
-        collection.upsert(ids=batch_ids, documents=batch_docs, metadatas=batch_metas, embeddings=embeddings)
-
-        if i + batch_size < len(documents):
-            time.sleep(10)
-
-    print(f"  Added {len(documents)} documents to ChromaDB.")
+    print(f"Rebuilt vector store with {len(all_docs)} documents.")
 
 
 # ---------------------------------------------------------------------------
 # 5. MAIN PIPELINE
 # ---------------------------------------------------------------------------
 
-def process_date(report_date: date):
+def process_date(report_date: date, page_url: str = None, skip_embeddings: bool = False):
     """Full pipeline for one report date."""
     date_str = report_date.isoformat()
     print(f"\n{'='*60}")
     print(f"Processing: {date_str}")
 
-    pdf_path = download_pdf(report_date)
+    pdf_path = download_pdf(report_date, page_url)
 
     print("  Extracting district table...")
     extracted_date, district_df = extract_district_table(pdf_path)
@@ -758,8 +822,14 @@ def process_date(report_date: date):
     report_id = load_into_db(date_str, pdf_path, observations_df, state_df, locality_df, death_df)
     print(f"    Inserted as report_id={report_id}")
 
-    print("  Updating vector store...")
-    update_embeddings(date_str, observations_df, locality_df, death_df)
+    if skip_embeddings:
+        print("  Skipping vector store update (--skip-embeddings).")
+    else:
+        print("  Updating vector store...")
+        try:
+            update_embeddings(date_str, observations_df, locality_df, death_df)
+        except Exception as e:
+            print(f"  WARNING: Embedding failed (data still in SQLite): {e}")
 
     print(f"  Done: {date_str}")
     return True
@@ -770,22 +840,28 @@ def main():
     parser.add_argument("--days", type=int, help="Only fetch the last N days")
     parser.add_argument("--date", type=str, help="Fetch a specific date (YYYY-MM-DD)")
     parser.add_argument("--skip-embeddings", action="store_true", help="Skip vector store update")
+    parser.add_argument("--rebuild-vectors", action="store_true",
+                        help="Rebuild the entire ChromaDB from data already in SQLite (use after changing embedding model)")
     args = parser.parse_args()
+
+    if args.rebuild_vectors:
+        rebuild_vectors_from_db()
+        return
 
     existing_dates = get_existing_dates()
     print(f"Existing reports in DB: {len(existing_dates)}")
 
     if args.date:
-        target_dates = [date.fromisoformat(args.date)]
+        target_dates = {date.fromisoformat(args.date): None}
     else:
         available = get_available_dates()
         print(f"Reports available on IDSP site: {len(available)}")
 
         if args.days:
             cutoff = date.today()
-            available = [d for d in available if (cutoff - d).days <= args.days]
+            available = {d: url for d, url in available.items() if (cutoff - d).days <= args.days}
 
-        target_dates = [d for d in available if d.isoformat() not in existing_dates]
+        target_dates = {d: url for d, url in available.items() if d.isoformat() not in existing_dates}
 
     print(f"New reports to process: {len(target_dates)}")
 
@@ -796,7 +872,7 @@ def main():
     success, failed = 0, 0
     for d in sorted(target_dates):
         try:
-            process_date(d)
+            process_date(d, target_dates[d], skip_embeddings=args.skip_embeddings)
             success += 1
         except Exception as e:
             print(f"  FAILED: {d} - {e}")

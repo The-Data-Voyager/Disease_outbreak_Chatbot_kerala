@@ -1,34 +1,19 @@
-"""IDSP Kerala - Vector Search Module"""
+"""IDSP Kerala - Vector Search Module (local bge-small-en-v1.5 embeddings)"""
 
-import os
 import chromadb
-from google import genai
-from dotenv import load_dotenv
 from typing import Optional
 
-
-EMBEDDING_MODEL = "gemini-embedding-001"
+from embeddings import embed_query
 
 
 class VectorSearch:
-    def __init__(self, chroma_path: str, env_path: str = ".env"):
-        load_dotenv(env_path)
-        api_key = os.getenv("GEMINI_API_KEY")
-        if not api_key:
-            raise ValueError("GEMINI_API_KEY not found in .env")
-        self.gemini_client = genai.Client(api_key=api_key)
-
+    def __init__(self, chroma_path: str):
         chroma_client = chromadb.PersistentClient(path=chroma_path)
         self.collection = chroma_client.get_collection("idsp_kerala")
 
     def search(self, question: str, n_results: int = 5,
                where: Optional[dict] = None) -> dict:
-        q_result = self.gemini_client.models.embed_content(
-            model=EMBEDDING_MODEL,
-            contents=question,
-            config={"task_type": "RETRIEVAL_QUERY"}
-        )
-        q_embedding = q_result.embeddings[0].values
+        q_embedding = embed_query(question)
 
         kwargs = {
             "query_embeddings": [q_embedding],

@@ -3,7 +3,7 @@
 import os
 import streamlit as st
 from dotenv import load_dotenv
-from google import genai
+from openai import OpenAI
 from query_router import QueryRouter, classify_intent, extract_district, extract_disease
 from vector_search import VectorSearch
 
@@ -11,7 +11,11 @@ load_dotenv()
 
 DB_PATH = os.path.join("notebooks", "data", "idsp_kerala.db")
 CHROMA_PATH = os.path.join("data", "chroma_db")
-LLM_MODEL = "gemini-3.6-flash"
+
+# Grok (xAI) — OpenAI-compatible. Set XAI_API_KEY in .env / Streamlit Secrets.
+# Override GROK_MODEL if xAI's current model id differs from the default.
+GROK_BASE_URL = "https://api.x.ai/v1"
+GROK_MODEL = os.getenv("GROK_MODEL", "grok-2-latest")
 
 SYSTEM_PROMPT = """You are an IDSP Kerala Disease Surveillance Assistant. You answer questions
 about disease outbreaks, case counts, deaths, and localities in Kerala using
@@ -34,8 +38,8 @@ RULES:
 def load_components():
     router = QueryRouter(DB_PATH)
     vector = VectorSearch(CHROMA_PATH)
-    gemini_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-    return router, vector, gemini_client
+    grok_client = OpenAI(api_key=os.getenv("XAI_API_KEY"), base_url=GROK_BASE_URL)
+    return router, vector, grok_client
 
 
 def build_context(question, router, vector):
@@ -46,12 +50,15 @@ def build_context(question, router, vector):
         parts.append(sql_df.to_string(index=False))
     else:
         parts.append("(No structured data matched.)")
-    vector_context = vector.get_context(question, n_results=3)
-    parts.append(f"\n## Relevant Documents\n{vector_context}")
+    try:
+        vector_context = vector.get_context(question, n_results=3)
+        parts.append(f"\n## Relevant Documents\n{vector_context}")
+    except Exception:
+        parts.append("\n## Relevant Documents\n(Vector search unavailable, using SQL data only.)")
     return "\n\n".join(parts)
 
 
-def get_answer(question, router, vector, gemini_client):
+def get_answer(question, router, vector, grok_client):
     context = build_context(question, router, vector)
     prompt = f"""Based on the following IDSP Kerala data, answer the user's question.
 
@@ -61,16 +68,16 @@ DATA CONTEXT:
 USER QUESTION: {question}
 
 ANSWER:"""
-    response = gemini_client.models.generate_content(
-        model=LLM_MODEL,
-        contents=prompt,
-        config={
-            "system_instruction": SYSTEM_PROMPT,
-            "temperature": 0.2,
-            "max_output_tokens": 1024,
-        }
+    response = grok_client.chat.completions.create(
+        model=GROK_MODEL,
+        messages=[
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": prompt},
+        ],
+        temperature=0.2,
+        max_tokens=1024,
     )
-    return response.text
+    return response.choices[0].message.content
 
 
 SAMPLE_QUESTIONS = [
@@ -95,7 +102,7 @@ st.set_page_config(page_title="IDSP Kerala Chatbot", page_icon="🏥", layout="w
 st.title("🏥 IDSP Kerala Disease Surveillance Chatbot")
 st.caption("Ask questions about disease outbreaks, cases, deaths, and localities in Kerala.")
 
-router, vector, gemini_client = load_components()
+router, vector, grok_client = load_components()
 
 # --- Sidebar ---
 with st.sidebar:
@@ -108,7 +115,7 @@ with st.sidebar:
 
     st.divider()
     st.markdown("**Data Source:** [IDSP Kerala](https://dhs.kerala.gov.in/en/idsp-2/)")
-    st.markdown("**Powered by:** Gemini + ChromaDB + SQLite")
+    st.markdown("**Powered by:** Grok + bge-small (local) + ChromaDB + SQLite")
 
     if st.button("Clear Chat", use_container_width=True):
         st.session_state.messages = []
@@ -134,7 +141,7 @@ if prompt:
 
     with st.chat_message("assistant"):
         with st.spinner("Analyzing IDSP data..."):
-            answer = get_answer(prompt, router, vector, gemini_client)
+            answer = get_answer(prompt, router, vector, grok_client)
         st.markdown(answer)
 
     st.session_state.messages.append({"role": "assistant", "content": answer})
